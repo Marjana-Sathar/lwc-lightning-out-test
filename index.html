@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Embed Salesforce Component</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Salesforce Component</title>
+    <script src="https://impaqtive52-dev-ed.develop.lightning.force.com/lightning/lightning.out.js"></script>
+    <script>
+        $Lightning.use(
+            'c:myApp', 
+            function () {
+                $Lightning.createComponent(
+                    'c:customCommentFeeder', 
+                    {}, 
+                    'lightningLocator', 
+                    function (cmp) {
+                        // You can interact with the component here if needed
+                    }
+                );
+            },
+            'https://impaqtive52-dev-ed.develop.lightning.force.com/'  // Make sure to match the same domain as your Lightning component
+        );
+    </script>
 </head>
 <body>
-<h1>Embedding Salesforce Lightning Component in an Iframe</h1>
-<iframe src="
-https://impaqtive52-dev-ed.develop.lightning.force.com/lightning/c/myApp.app">
-</iframe>
+    <h1>Embedding Salesforce Lightning Component in an Iframe</h1>
+    <div id="lightningLocator"></div>
 </body>
 </html>
