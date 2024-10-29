@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embed Salesforce Component</title>
-    <script src="https://impaqtive52-dev-ed.develop.lightning.force.com/lightning/lightning.out.js"></script>
-    <script>
-        $Lightning.use(
-            'c:myApp', 
-            function () {
-                $Lightning.createComponent(
-                    'c:customCommentFeeder', 
-                    {}, 
-                    'lightningLocator', 
-                    function (cmp) {
-                        // You can interact with the component here if needed
-                    }
-                );
-            },
-            'https://impaqtive52-dev-ed.develop.lightning.force.com/'  // Make sure to match the same domain as your Lightning component
-        );
-    </script>
-</head>
+<html>
 <body>
-    <h1>Embedding Salesforce Lightning Component in an Iframe</h1>
-    <div id="lightningLocator"></div>
+ 
+<h2>HTML Iframes</h2>
+<p>You can use the height and width attributes to specify the size of the iframe:</p>
+ 
+<iframe src="https://playful-wolf-ld76wi-dev-ed.trailblaze.lightning.force.com/apex/ChatterTest?recId=500dL00000EV00TQAT">
+</iframe>
+ 
 </body>
 </html>
